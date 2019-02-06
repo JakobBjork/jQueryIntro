@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+  background-color: lightgray;
+}
+
+body {
+  background-color: white;
+  padding-top: 80px;
+}
+
+h1, h2, h3, h4{
+  padding-top: 80px;
+  margin-top: -80px;
+}
+
+.navbar a.navbar-brand img{
+  height: 50px;
+  width: 50px;
+}
+
+.borders{
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.col-md-3, .col-md-4, .col-md-5{
+  min-height: 200px;
+}
+
+.listOfUses{
+  background-color: black;
+  color: white;
+}
+
+#buttonShow{
+  display: none;
+}
+
+#barToSlide, #slidingPanel{
+  padding: 5px;
+  text-align: center;
+  background-color: grey;
+  border: solid 1px black;
+}
+
+#slidingPanel{
+  padding: 40px;
+  display: none;
+}
+
+.exampleBox{
+  height: 100px;
+  width: 100px;
+}
+  #animatedBox{
+  position: absolute;
+  background-color: red;
+  }
+  #fadeBoxFast{
+    display: inline-block;
+    background-color: red;
+  }
+  #fadeBoxNormal{
+    display: inline-block;
+    background-color: yellow;
+  }
+  #fadeBoxSlow{
+    display: inline-block;
+    background-color: blue;
+  }
+
+#buttonGoLeft{
+  display: none;
+}
+
+footer{
+  border-top: solid 1px lightgray;
+}
+
+footerRow{
+  border-top: 2px solid;
+}
+
+footerSignatures{
+  border: 1px solid;
+}

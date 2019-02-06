@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Introduktion till jQuery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+    <script src="jQuery.js"></script>
+    
+</head>
+<body class="container">
+
+    <!-- Navigeringsmeny -->
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#headline"><img src="./Images/Jqueryikon.jpg" alt="jQuery"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutJQuery">Om jQuery</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Exempel
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#example1">1: Göm och visa</a>
+                <a class="dropdown-item" href="#example2">2: Hover</a>
+                <a class="dropdown-item" href="#example3">3: Slide</a>
+                <a class="dropdown-item" href="#example4">4: Animations</a>
+                <a class="dropdown-item" href="#example5">5: Fade</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footerSources" tabindex="-1" aria-disabled="true">Källor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footerHeadline" tabindex="-1" aria-disabled="true">Om oss</a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+
+      <h1 id="headline">Introduktion till</h1>
+      <img src="./Images/JQuery_logo.svg.png" alt="jQuery logo" class="img-fluid" id="headimage">
+      <br><br><br>
+      <!-- Mall: texter -->
+      <div class="container">
+            <h2 class="rubrik" id="aboutJQuery">Om jQuery</h2>
+          <div class="row borders">
+              <div class="col-md-6">
+              <h3>Vad är jQuery</h3>
+              <p>
+                jQuery är ett litet och snabbt JavaScript bibliotek med många funktioner. Med en väl utvecklad API mycket möjligheter och bra stöd för ytterligare tillägg har jQuery ändrat hur miljoner skriver JavaScript.
+              </p>
+              </div>
+              <div class="col-md-6">
+                <h3>Historia</h3>
+                <p>
+                  jQuery skapades i Januari 2006 av John Resig. Det underhålls I nuläget av team med utvecklare under Timmy Willison. Från slutet av 2006 och fram till 2012 fanns det två olika licenser för det. Något som orsakat viss förvirring. jQuery växer stadigt. 2015 användes det av 63% av dom 1 miljon mest besökta sidorna. 2018 var den siffran uppe I 73% och 22,4% av alla webbsidor.
+                </p>
+              </div>
+          </div>
+          <div class="row borders">
+            <div class="col-md-6">
+              <h3>Varför jQuery</h3>
+              <p>
+                  Syftet med jQuery är att underlätta användandet av JavaScript. Många vanliga JavaScript uppgifter kan dras ner från flera rader till en ensam rad. Även mer avancerade JavaScript saker som AJAX och DOM förenklas. Förutom att ha bra färdigt stöd för följande så finns det även många färdiga tillägg man kan installera. <br>
+                  jQuery är trots att det finns många konkurrenter störst och används av stora företag som Google, Microsoft och Netflix.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <h4>jQuery kan användas till</h4>
+              <ul class="listOfUses">
+                <li>HTML och DOM manipulering</li>
+                <li>CSS manipulering</li>
+                <li>Manipulering av händelser i HTML</li>
+                <li>Grafiska effekter och animeringar</li>
+                <li>AJAX</li>
+                <li>Verktyg</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      <br>
+
+      <!-- Mall: Exempel - förklaring/kod/resultat -->
+      <!-- Exempel 1 -->
+      <div class="container">
+            <h2 class="rubrik" id="example1">Exempel 1 - göm eller visa något</h2>
+          <div class="row borders">
+              <div class="row">
+                  <figure class="col-md-5"><figcaption>EXEMPELKOD</figcaption>
+                      <pre class="prettyprint">
+                          <code class="language-javascript" contenteditable spellcheck="false">
+$(document).ready(function(){
+  $("#buttonHide").click(function(){
+    $("#textToHide").hide();
+    $("#buttonShow").show();
+    $("#buttonHide").hide();
+  });
+});
+
+$(document).ready(function(){
+  $("#buttonShow").click(function(){
+    $("#textToHide").show();
+    $("#buttonShow").hide();
+    $("#buttonHide").show();
+  });
+});
+
+</code>
+                      </pre>
+                  </figure>
+                  <figure class="col-md-3">
+                    <figcaption>FÖRKLARING</figcaption>
+                    <br>
+                    <p>Här använder vi jQuery för att sätta ett beteende för två knappar, den ena som ska gömma en text och den andra som ska visa den.</p>
+                  </figure>
+              
+                  <figure class="col-md-4"><figcaption>PROVA GÄRNA</figcaption>
+                      <button id="buttonShow">Tryck för att visa!</button>
+                      <button id="buttonHide">Tryck för att gömma!</button>
+                      <p id="textToHide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum temporibus deleniti explicabo, quibusdam nostrum facere odit, asperiores reprehenderit saepe minus atque necessitatibus consequatur vel libero ullam? Cumque nesciunt quisquam aut?</p>
+                  </figure>
+                 </div>
+        </div>
+      </div>
+
+      <!-- Exempel 2 -->
+      <div class="container">
+        <h2 class="rubrik" id="example2">Exempel 2 - Hover</h2>
+      <div class="row borders">
+          <div class="row">
+              <figure class="col-md-5"><figcaption>exempelkod</figcaption>
+                  <pre class="prettyprint">
+                      <code class="language-javascript" contenteditable spellcheck="false">
+$(document).ready(function(){
+  $("#textToHover").mouseenter(function(){
+    $("#textToHover").css("color", "red");
+    $("#textToHover").css("font-size", "50px");
+  });
+});
+
+$(document).ready(function(){
+  $("#textToHover").mouseleave(function(){
+    $("#textToHover").css("color", "black");
+    $("#textToHover").css("font-size", "31px");
+  });
+});
+
+
+</code>
+                  </pre>
+              </figure>
+              <figure class="col-md-3">
+                <figcaption>FÖRKLARING</figcaption>
+                <br>
+                <p>Här visar vi att man inte nödvändigtvis behöver ett knapptryck för att förändra beteendet, det kan ibland räcka med att hålla musen över något för att till exempel förstora det för att kunna se bättre. <br>
+                Notera även hur vi här använder oss av jQuery för att påverka värden i css, något som kan komma till användning på många sätt och vis.</p>
+                </figure>
+          
+              <figure class="col-md-4"><figcaption>PROVA GÄRNA</figcaption>
+                <h2 id="textToHover">Håll musen över mig!</h2>
+              </figure>
+             </div>
+    </div>
+  </div>
+
+  <!-- Exempel 3 -->
+  <div class="container">
+    <h2 class="rubrik" id="example3">Exempel 3 - Slide</h2>
+  <div class="row borders">
+      <div class="row">
+          <figure class="col-md-5"><figcaption>EXEMPELKOD</figcaption>
+              <pre class="prettyprint">
+                  <code class="language-javascript" contenteditable spellcheck="false">
+$(document).ready(function(){
+  $("#barToSlide").click(function(){
+    $("#slidingPanel").slideToggle("slow");
+  });
+});
+
+
+
+</code>
+              </pre>
+          </figure>
+          <figure class="col-md-3">
+            <figcaption>FÖRKLARING</figcaption>
+            <br>
+            <p>Något användbart vid skapande av menyer skulle kunna vara slide, då vi istället för att få något som dyker upp och försvinner direkt kan få en lite snyggare animation på det hela som får menyn att se mjukare ut.</p>
+          </figure>
+      
+          <figure class="col-md-4"><figcaption>PROVA GÄRNA</figcaption>
+            <div id="barToSlide">Tryck på mig för att dra ner/upp menyn!</div>
+            <div id="slidingPanel">Hello World!</div>
+          </figure>
+         </div>
+</div>
+</div>
+
+
+<!-- Exempel 4 -->
+<div class="container">
+  <h2 class="rubrik" id="example4">Exempel 4 - Animations</h2>
+<div class="row borders">
+    <div class="row">
+        <figure class="col-md-5"><figcaption>EXEMPELKOD</figcaption>
+            <pre class="prettyprint">
+                <code class="language-javascript" contenteditable spellcheck="false">
+$(document).ready(function(){
+  $("#buttonGoRight").click(function(){
+    $("#buttonGoRight").hide();
+    $("#buttonGoLeft").show();
+    $("#animatedBox").animate({left: '75px'});
+  });
+});
+
+$(document).ready(function(){
+  $("#buttonGoLeft").click(function(){
+    $("#buttonGoLeft").hide();
+    $("#buttonGoRight").show();
+    $("#animatedBox").animate({left: '15px'});
+  });
+});
+
+
+</code>
+            </pre>
+        </figure>
+        <figure class="col-md-3">
+          <figcaption>FÖRKLARING</figcaption>
+          <br>
+          <p>Vi kan även använda jQuery för att animera objekt på olika vis, så som att dra dem åt olika håll. Kombinerar man detta med att förstora saker kan man lägga fokus på dem på ett snyggt sätt.</p>
+        </figure>
+    
+        <figure class="col-md-4"><figcaption>PROVA GÄRNA</figcaption>
+          <button id="buttonGoRight">Skjut åt höger!</button>
+          <button id="buttonGoLeft">Skjut åt vänster!</button>
+          <div class="exampleBox" id="animatedBox"></div>
+    
+        </figure>
+       </div>
+</div>
+</div>
+
+<!-- Exempel 5 -->
+<div class="container">
+  <h2 class="rubrik" id="example5">Exempel 5 - Fading</h2>
+<div class="row borders">
+    <div class="row">
+        <figure class="col-md-5"><figcaption>EXEMPELKOD</figcaption>
+            <pre class="prettyprint">
+                <code class="language-javascript" contenteditable spellcheck="false">
+$(document).ready(function(){
+  $("#buttonFade").click(function(){
+    $("#fadeBoxFast").fadeToggle("fast");
+    $("#fadeBoxNormal").fadeToggle();
+    $("#fadeBoxSlow").fadeToggle("slow");
+  });
+});
+
+
+
+</code>
+            </pre>
+        </figure>
+        <figure class="col-md-3">
+          <figcaption>FÖRKLARING</figcaption>
+          <br>
+          <p>Precis som med animationer kan vi vilja fadea ut eller in olika element. Ett exempel på användning skulle kunna vara när man vill ha en meny som fadear in snarare än glider in som exemplet ovan visade.</p>
+        </figure>
+    
+        <figure id="fadeTesting" class="col-md-4"><figcaption>PROVA GÄRNA</figcaption>
+          <button id="buttonFade">Tryck för fading!</button>
+          <br>
+          <div class ="exampleBox" id="fadeBoxFast"></div>
+          <div class ="exampleBox" id="fadeBoxNormal"></div>
+          <div class ="exampleBox" id="fadeBoxSlow"></div>
+        </figure>
+       </div>
+</div>
+</div>
+
+
+<!-- Källhänvisning -->
+<div class="container">
+  <h4 id="footerSources">Källor</h4>
+  <p>För mer information samt dokumentation rekommenderar vi:</p>
+  <ul>
+    <li><a href="https://www.w3schools.com/jquery/" target="_blank">w3schools</a></li>
+    <li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
+    <li><a href="
+      https://en.wikipedia.org/wiki/JQueryhttps://en.wikipedia.org/wiki/JQuery
+      " target="_blank">Wikipedia</a></li>
+  </ul>
+</div>
+      <!--Sidfot / signatur -->
+      <footer>
+        <div class="container">
+            <h4 id="footerHeadline">Om oss</h4>
+            <div class="row footerRow">
+                <div class="col-md-6 footerSignatures">
+                    <h5>Jakob Björk</h5>
+                    <h6>Studerande - Kvalitetssäkrare och Testare inom IT</h6>
+                    <h6>Nackademin</h6>
+                </div>
+                <div class="col-md-6 footerSignatures">
+                    <h5>Anders Hansson</h5>
+                    <h6>Studerande - Kvalitetssäkrare och Testare inom IT</h6>
+                    <h6>Nackademin</h6>
+                </div>
+            </div>
+        </div>
+      </footer>
+      
+      
+      <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+      <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+      
+</body>
+</html>
+
+
